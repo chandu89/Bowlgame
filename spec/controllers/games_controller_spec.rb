@@ -39,13 +39,14 @@ RSpec.describe GamesController, type: :controller do
 
     end
 
-    # context 'when accessing new_ball via POST with invalid pins' do
-    #   before { post :new_ball, params:{game_id: Game.first, pins: -1} }
-    #
-    #   it 'returns a unprocessable_entity' do
-    #     expect(response.content_type).to eq("application/json")
-    #     expect(response).to have_http_status(:unprocessable_entity)
-    #   end
-    # end
+    context 'when accessing new_ball via POST' do
+      before { post :new_ball, params:{game_id: Game.first, pins: 11} }
+
+      it 'returns unprocessable_entity' do
+        expect(response.content_type).to eq("application/json")
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+
+    end
   end
 end

@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-15T23:10:58+05:30">2020-01-15T23:10:58+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-01-15T23:24:57+05:30">2020-01-15T23:24:57+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.32%</span></span>
+    (<span class="covered_percent"><span class="green">95.91%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.45
+         2.73
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>31</b> files in total.
-    <b>264</b> relevant lines. 
-    <span class="green"><b>249</b> lines covered</span> and
-    <span class="red"><b>15</b> lines missed </span>
+    <b>269</b> relevant lines. 
+    <span class="green"><b>258</b> lines covered</span> and
+    <span class="red"><b>11</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#b1763c89ddd7d1a6a7824ad67645650e46235c40" class="src_link" title="app/controllers/games_controller.rb">app/controllers/games_controller.rb</a></td>
-        <td class="green strong">93.33 %</td>
-        <td>26</td>
+        <td class="green strong">100.0 %</td>
+        <td>27</td>
         <td>15</td>
-        <td>14</td>
-        <td>1</td>
-        <td>1.0</td>
+        <td>15</td>
+        <td>0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -97,27 +97,27 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>3.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#2e0fded0e7d3f90de91c1e60a6317646c94c2c0f" class="src_link" title="app/models/frame.rb">app/models/frame.rb</a></td>
-        <td class="yellow strong">81.82 %</td>
+        <td class="green strong">90.91 %</td>
         <td>40</td>
         <td>22</td>
-        <td>18</td>
-        <td>4</td>
-        <td>1.6</td>
+        <td>20</td>
+        <td>2</td>
+        <td>2.9</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#fd73e8383b0d69074a4f10a9cdd6461af232954f" class="src_link" title="app/models/game.rb">app/models/game.rb</a></td>
-        <td class="green strong">97.06 %</td>
+        <td class="green strong">100.0 %</td>
         <td>56</td>
         <td>34</td>
-        <td>33</td>
-        <td>1</td>
-        <td>7.9</td>
+        <td>34</td>
+        <td>0</td>
+        <td>8.8</td>
       </tr>
       
       <tr>
@@ -283,11 +283,11 @@
       <tr>
         <td class="strong"><a href="#008ace1a28206fab0d769f08a627c8c64e897618" class="src_link" title="spec/controllers/games_controller_spec.rb">spec/controllers/games_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>51</td>
-        <td>21</td>
-        <td>21</td>
+        <td>52</td>
+        <td>26</td>
+        <td>26</td>
         <td>0</td>
-        <td>1.1</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -410,11 +410,11 @@
         <div class="source_table" id="b1763c89ddd7d1a6a7824ad67645650e46235c40">
   <div class="header">
     <h3>app/controllers/games_controller.rb</h3>
-    <h4><span class="green">93.33 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>15</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -499,79 +499,85 @@
           <code class="ruby">  def new_ball</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
           
           <code class="ruby">    errors = @game.new_ball params[:pins]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    if errors.empty?</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      render json: @game, include: &#39;frames,frames.balls&#39;, status: :created</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
-          
-          <code class="ruby">      render json: { errors: errors }, status: :unprocessable_entity</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def set_game</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="24">
+        <li class="covered" data-hits="2" data-linenumber="16">
           <span class="hits">2</span>
           
-          <code class="ruby">    @game = Game.find params[:id] || params[:game_id]</code>
+          <code class="ruby">    if errors.empty?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      render json: @game, include: &#39;frames,frames.balls&#39;, status: :created</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      render json: { errors: errors }, status: :unprocessable_entity</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def set_game</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="25">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @game = Game.find params[:id] || params[:game_id]</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
@@ -796,8 +802,8 @@
           <code class="ruby">  def value</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="9" data-linenumber="9">
+          <span class="hits">9</span>
           
           <code class="ruby">    return @value if @value # do not calcute value if already set from outside</code>
         </li>
@@ -808,8 +814,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="9" data-linenumber="11">
+          <span class="hits">9</span>
           
           <code class="ruby">    pins == 10 ? &#39;X&#39; : pins.to_s</code>
         </li>
@@ -834,11 +840,11 @@
         <div class="source_table" id="2e0fded0e7d3f90de91c1e60a6317646c94c2c0f">
   <div class="header">
     <h3>app/models/frame.rb</h3>
-    <h4><span class="yellow">81.82 %</span> covered</h4>
+    <h4><span class="green">90.91 %</span> covered</h4>
     <div>
       <b>22</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>20</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -899,8 +905,8 @@
           <code class="ruby">  def complete?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">    if last?</code>
         </li>
@@ -923,8 +929,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="14">
+          <span class="hits">3</span>
           
           <code class="ruby">      strike? || balls.to_a.count == 2</code>
         </li>
@@ -953,8 +959,8 @@
           <code class="ruby">  def incomplete?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
           
           <code class="ruby">    !complete?</code>
         </li>
@@ -977,8 +983,8 @@
           <code class="ruby">  def strike?</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="23">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="18" data-linenumber="23">
+          <span class="hits">18</span>
           
           <code class="ruby">    balls.first&amp;.pins == 10</code>
         </li>
@@ -1001,14 +1007,14 @@
           <code class="ruby">  def spare?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="27">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="27">
+          <span class="hits">5</span>
           
           <code class="ruby">    return false if balls.to_a.count &lt; 2</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
-          
+        <li class="covered" data-hits="4" data-linenumber="28">
+          <span class="hits">4</span>
           
           <code class="ruby">    balls.first.pins + balls.second.pins == MAX_PINS</code>
         </li>
@@ -1031,8 +1037,8 @@
           <code class="ruby">  def balls_total</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
-          
+        <li class="covered" data-hits="12" data-linenumber="32">
+          <span class="hits">12</span>
           
           <code class="ruby">    balls.reduce(0) { |sum, ball| sum + ball.pins }</code>
         </li>
@@ -1067,8 +1073,8 @@
           <code class="ruby">    # TODO: break the cyclic dependency and not call game methods</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="38">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="38">
+          <span class="hits">3</span>
           
           <code class="ruby">    game.frames.to_a.count == 10</code>
         </li>
@@ -1093,11 +1099,11 @@
         <div class="source_table" id="fd73e8383b0d69074a4f10a9cdd6461af232954f">
   <div class="header">
     <h3>app/models/game.rb</h3>
-    <h4><span class="green">97.06 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>34</b> relevant lines. 
-      <span class="green"><b>33</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>34</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1146,8 +1152,8 @@
           <code class="ruby">  default_scope {</code>
         </li>
       
-        <li class="covered" data-hits="85" data-linenumber="8">
-          <span class="hits">85</span>
+        <li class="covered" data-hits="87" data-linenumber="8">
+          <span class="hits">87</span>
           
           <code class="ruby">    includes(:frames, :balls)</code>
         </li>
@@ -1176,10 +1182,10 @@
           <code class="ruby">  def new_ball(pins)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="13">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="13">
+          <span class="hits">7</span>
           
-          <code class="ruby">    ball = Ball.new pins: pins</code>
+          <code class="ruby">    ball = Ball.create pins: pins</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -1188,8 +1194,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="15">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="15">
+          <span class="hits">7</span>
           
           <code class="ruby">    if frames.last&amp;.incomplete?</code>
         </li>
@@ -1200,8 +1206,8 @@
           <code class="ruby">      frames.last.balls &lt;&lt; ball</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="17">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="17">
+          <span class="hits">5</span>
           
           <code class="ruby">    elsif frames.to_a.count == 10</code>
         </li>
@@ -1218,8 +1224,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="20">
+          <span class="hits">4</span>
           
           <code class="ruby">      frames &lt;&lt; Frame.new(balls: [ ball ])</code>
         </li>
@@ -1230,8 +1236,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="22">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="22">
+          <span class="hits">6</span>
           
           <code class="ruby">    ball.errors.to_a</code>
         </li>
@@ -1314,8 +1320,8 @@
           <code class="ruby">      current =</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="36">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="16" data-linenumber="36">
+          <span class="hits">16</span>
           
           <code class="ruby">      if frame.strike?</code>
         </li>
@@ -1326,8 +1332,8 @@
           <code class="ruby">        next_n_balls_score(frame.balls.first, 2)&amp;.+ 10</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="38">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="15" data-linenumber="38">
+          <span class="hits">15</span>
           
           <code class="ruby">      elsif frame.spare?</code>
         </li>
@@ -1344,14 +1350,14 @@
           <code class="ruby">        next_n_balls_score(frame.balls.second, 1)&amp;.+ 10</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="41">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="41">
+          <span class="hits">5</span>
           
           <code class="ruby">      elsif frame.balls.size == 2</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
+        <li class="covered" data-hits="4" data-linenumber="42">
+          <span class="hits">4</span>
           
           <code class="ruby">        frame.balls_total</code>
         </li>
@@ -1362,20 +1368,20 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="44">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="16" data-linenumber="44">
+          <span class="hits">16</span>
           
           <code class="ruby">      break unless current</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="45">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="14" data-linenumber="45">
+          <span class="hits">14</span>
           
           <code class="ruby">      score = score ? score + current : current</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="46">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="14" data-linenumber="46">
+          <span class="hits">14</span>
           
           <code class="ruby">      frame.score = score</code>
         </li>
@@ -2828,8 +2834,8 @@
     <h3>spec/controllers/games_controller_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>21</b> lines covered</span> and
+      <b>26</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3083,61 +3089,67 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    # context &#39;when accessing new_ball via POST with invalid pins&#39; do</code>
+          <code class="ruby">    context &#39;when accessing new_ball via POST&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="covered" data-hits="2" data-linenumber="43">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    #   before { post :new_ball, params:{game_id: Game.first, pins: -1} }</code>
+          <code class="ruby">      before { post :new_ball, params:{game_id: Game.first, pins: 11} }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">    #</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #   it &#39;returns a unprocessable_entity&#39; do</code>
+          <code class="ruby">      it &#39;returns unprocessable_entity&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #     expect(response.content_type).to eq(&quot;application/json&quot;)</code>
+          <code class="ruby">        expect(response.content_type).to eq(&quot;application/json&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #     expect(response).to have_http_status(:unprocessable_entity)</code>
+          <code class="ruby">        expect(response).to have_http_status(:unprocessable_entity)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">    #   end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">    # end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">end</code>

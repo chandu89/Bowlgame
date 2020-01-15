@@ -10,7 +10,7 @@ class Game < ApplicationRecord
 
   # @return array of errors. An empty array if no errors and record was saved
   def new_ball(pins)
-    ball = Ball.new pins: pins
+    ball = Ball.create pins: pins
 
     if frames.last&.incomplete?
       frames.last.balls << ball

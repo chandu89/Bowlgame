@@ -12,6 +12,7 @@ class GamesController < ApplicationController
 
   def new_ball
     errors = @game.new_ball params[:pins]
+
     if errors.empty?
       render json: @game, include: 'frames,frames.balls', status: :created
     else
