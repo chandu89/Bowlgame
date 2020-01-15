@@ -23,6 +23,7 @@ run the server:
     $ rails s
 
 run the tests:
+
     $ rspec
 
 
