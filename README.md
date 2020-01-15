@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+create a new game:
 
-Things you may want to cover:
+    POST /games
 
-* Ruby version
+record a new ball played:
 
-* System dependencies
+    POST /games/:game_id/new_ball
 
-* Configuration
+see game score with breakdown
 
-* Database creation
+    GET /games/:game_id
 
-* Database initialization
+## Local Installation
 
-* How to run the test suite
+create the database and set the schema:
 
-* Services (job queues, cache servers, search engines, etc.)
+    $ rails db:create db:migrate or db:setup
 
-* Deployment instructions
+run the server:
 
-* ...
+    $ rails s
+
+run the tests:
+    $ rspec
+
+
+## About
+
+This is a rails api to keep track of bowling games.
+
+* We can play and create many games at a time.
+* The Game which we are creating follows `UUID` convention.
+* We can show the game by using `#show method` any time.
