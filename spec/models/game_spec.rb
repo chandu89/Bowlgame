@@ -36,20 +36,13 @@ RSpec.describe Game, type: :model do
     context 'add a new_ball with invalid pins' do
 
       it "should not save and return false" do
-        expect(game.new_ball(-1)).to be_falsey
+        expect(game.new_ball(-1)).to eq ["Pins must be greater than or equal to 0"]
       end
 
       it "should not save and return false" do
-        expect(game.new_ball(11)).to be_falsey
+        expect(game.new_ball(11)).to eq ["Pins must be less than or equal to 10"]
       end
     end
-    # context 'when next_frame is false' do
-    #
-    #   it "should not save and return false" do
-    #     allow(game).to receive(:next_frame).and_return(false)
-    #     expect(game.new_ball(11)).to be_falsey
-    #   end
-    # end
   end
 
   describe '#total_score' do
