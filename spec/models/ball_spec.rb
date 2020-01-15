@@ -25,5 +25,5 @@ RSpec.describe Ball, type: :model do
       expect{ball}.to raise_error(ActiveRecord::RecordInvalid, 'Validation failed: Pins must be greater than or equal to 0')
     end
   end
-
+  
 end

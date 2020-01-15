@@ -43,11 +43,21 @@ RSpec.describe Game, type: :model do
         expect(game.new_ball(11)).to be_falsey
       end
     end
-    context 'when next_frame is false' do
+    # context 'when next_frame is false' do
+    #
+    #   it "should not save and return false" do
+    #     allow(game).to receive(:next_frame).and_return(false)
+    #     expect(game.new_ball(11)).to be_falsey
+    #   end
+    # end
+  end
 
-      it "should not save and return false" do
-        allow(game).to receive(:next_frame).and_return(false)
-        expect(game.new_ball(11)).to be_falsey
+  describe '#total_score' do
+    let(:game){FactoryGirl.create(:game)}
+
+    context "with valid args" do
+      it "should return valid" do
+        expect(game.total_score).to be_nil
       end
     end
   end

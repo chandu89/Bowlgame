@@ -7,19 +7,23 @@ class GamesController < ApplicationController
   end
 
   def show
-    render json: @game
+    render json: @game, include: 'frames,frames.balls'
   end
 
   def new_ball
     if @game.new_ball params[:pins]
       render json: @game, status: :created
     else
-      render json: @game.errors, status: :unprocessable_entity
+      render json: game_completed_error, status: :unprocessable_entity
     end
   end
 
   private
   def set_game
     @game = Game.find params[:id] || params[:game_id]
+  end
+
+  def game_completed_error
+    { error: 'Game is completed' }
   end
 end
